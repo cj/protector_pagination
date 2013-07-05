@@ -1,28 +1,8 @@
-== README
+To test please run:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- rake db:create
+- rake db:seed
+- rails s
 
-Things you may want to cover:
+Then just visit the root and you'll see just one row printed but the pagination says there are 4 rows.  If you remove restrict! you'll see the correct amount of rows for the pagination displayed.  If you also add in the scope manuall like Post.where(can_view: true).page(1) you'll see the pagination is correct too.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
