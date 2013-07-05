@@ -1,0 +1,7 @@
+= paginate @posts
+
+%table
+  - @posts.each do |post|
+    %tr
+      %td
+        = post.title
